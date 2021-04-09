@@ -1,0 +1,755 @@
+/* ------------------------------------*/
+/* BASIC SETUP/CLEANUP */
+/* ------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: MediumSeaGreen;
+  color: #fff;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  overflow: visible;
+}
+
+body {
+  background-color: #ccc;
+}
+
+/* ------------------------------------*/
+/*      LANDING-PAGE HEADER            */
+/* ------------------------------------*/
+
+header {
+  /* makes header's bg image kind of faded */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/frontal.jpeg);
+  /* background-size: cover; */
+  background-position: center;
+  /* height: ; */
+  background-size: 100% 100%;
+  background-attachment: fixed; /*background image remains fixed
+                                while text moves up and down  as you scroll. */
+
+  /* Controls the size of the navbar header ABOUT ME MY WORK PORTFOLIO CONTACT */
+  height: 150vh;
+}
+
+.subtitle {
+  display: flex;
+  /* keeps Welcome to my Portfolio! My name is Willie horizontally to the left */
+  /* transform: translate(x-axis, y-axis)*/
+  transform: translate(5%, 220%);
+  /* background-color: #6466ed; */
+  background-color: mediumseagreen;
+  margin-left: 54%;
+  height: 15%;
+  width: 40%;
+}
+
+.subtitle h2 {
+  margin-left: 10px;
+  color: white;
+}
+/* 
+.nav-link {
+  float: right;
+  list-style: none;
+  margin-top: 2px;
+  margin-right: 55px;
+  padding-right: 0px;
+  font-size: 125%;
+  color: white;
+} */
+
+.nav-link {
+  display: flex;
+  flex-direction: right;
+  color: white;
+  font-size: 125%;
+}
+
+/*.nav ul li {
+    float: right;
+ } */
+
+/* MY NAME */
+.my-name {
+  float: left;
+  list-style: none;
+  margin-top: 55px;
+  color: white;
+  /* display: inline-block; */
+  margin-left: 0%;
+  /* padding for Willie's background color */
+  padding-left: 10%;
+  font-size: 220%;
+  /* background-color: #6466ed; */
+  background-color: mediumseagreen;
+}
+
+/*========================*/
+/*   SPECIALIZE SECTION   */
+/*========================*/
+.specialize {
+  padding-top: 15px;
+  text-align: center;
+  line-height: 145%;
+}
+
+.wheelhouses {
+  text-align: center;
+}
+
+.fsf {
+  text-align: center;
+  color: white;
+}
+
+/*========================*/
+/*     ABOUT ME PAGE      */
+/*========================*/
+.nav-about-link {
+  display: flex;
+  /* flex-wrap: wrap; */
+  float: right;
+  list-style: none;
+  /* margin-top: -50px; */
+  margin-right: 55px;
+  margin-bottom: 300px;
+  font-size: 125%;
+  color: white;
+}
+
+#header-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/pizza.jpg) 20% 30% / cover;
+  height: 10rem;
+  border-bottom: 3px solid MediumSeaGreen;
+}
+
+.about_me {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+.my-name-about {
+  float: left;
+  list-style: none;
+  margin-top: 5px;
+  color: white;
+  /* display: inline-block; */
+  margin-left: 0%;
+  /* padding for Willie's background color */
+  padding-left: 10%;
+  font-size: 220%;
+  /* background-color: #6466ed; */
+  background-color: MediumSeaGreen;
+}
+
+/* MY PICTURE */
+.my-picture {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 40px;
+  width: 50%;
+  height: 800px;
+}
+
+/*==========================*/
+/*        CONTACT           */
+/*==========================*/
+
+.nav-contact-link {
+  display: flex;
+  /* flex-wrap: wrap; */
+  float: right;
+  list-style: none;
+  /* margin-top: -50px; */
+  margin-right: 55px;
+  margin-bottom: 200px;
+  font-size: 125%;
+  color: white;
+}
+
+#header-contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/pizza.jpg) 20% 30% / cover;
+  height: 10rem;
+  border-bottom: 3px solid MediumSeaGreen;
+}
+
+.my-name-contact {
+  float: left;
+  list-style: none;
+  margin-top: 5px;
+  color: white;
+  margin-left: 0%;
+  /* padding for Willie's background color */
+  padding-left: 10%;
+  font-size: 220%;
+  /* background-color: #6466ed; */
+  background-color: MediumSeaGreen;
+}
+
+.hear-from-you {
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+.section-contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  /* so that fields fill the whole area */
+  width: 150%;
+  /* to make the fields a litte bit bigger */
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+input[type="checkbox"] {
+  margin: 15px 5px 15px 0;
+}
+
+textarea {
+  /* make the message area larger */
+  height: 100px;
+}
+
+/* adjusting footer height for contact page */
+.my-footer-contact {
+  margin-top: 20%;
+  /* background: hsl(248, 53%, 58%); */
+  background: MediumSeaGreen;
+  color: #fff;
+  height: 100px;
+}
+
+/*========================*/
+/*     WORK PAGE      */
+/*========================*/
+.nav-work-link {
+  display: flex;
+  /* flex-wrap: wrap; */
+  float: right;
+  list-style: none;
+  /* margin-top: -50px; */
+  margin-right: 55px;
+  margin-bottom: 200px;
+  font-size: 125%;
+  color: white;
+}
+
+#header-work {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/frontal.jpeg) 20% 30% / cover;
+  height: 10rem;
+  border-bottom: 3px solid mediumseagreen;
+}
+
+.my-name-work {
+  float: left;
+  list-style: none;
+  margin-top: 5px;
+  color: white;
+  /* display: inline-block; */
+  margin-left: 0%;
+  /* padding for Willie's background color */
+  padding-left: 10%;
+  font-size: 220%;
+  background-color: mediumseagreen;
+}
+
+/* formatting the portfolio's grid */
+/* centers My Work and Please, take a look at some of my projects */
+.section-title,
+.take-a-look {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 2;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* create three columns and two rows (css grid) */
+.items {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* resize portfolio images */
+.img-size {
+  height: 278px;
+  width: 208px;
+  /* gap between My Work and header */
+  margin-top: 100px;
+}
+
+.work-container {
+  margin-top: 40px;
+  margin-left: 1px;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.big-image-size {
+  margin-top: 30px;
+  height: 90%;
+}
+
+.current-work {
+  float: left;
+}
+
+.col-md-2 {
+  margin-top: 20px;
+}
+
+/* adjusting footer height for work page */
+.my-footer-work {
+  margin-top: 95%;
+  /* background: hsl(248, 53%, 58%); */
+  color: #fff;
+  height: 100px;
+}
+
+.button-but {
+  color: white;
+  background-color: white;
+}
+
+/* ====================== */
+/*       FOOTER          */
+/* ===================== */
+.my-footer {
+  margin-top: 10%;
+  /* background: hsl(248, 53%, 58%); */
+  background: MediumSeaGreen;
+  color: #fff;
+  height: 100px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social .fab {
+  margin-right: 10px;
+  /* boxes social icons */
+  border: 2px #fff solid;
+  /* circular (turns box into circle) form for social icons */
+  border-radius: 50%;
+  /* height and width of circle for social icons */
+  height: 35px;
+  width: 35px;
+  /* centers social icons inside circle */
+  line-height: 32px;
+  /* centers social icons */
+  text-align: center;
+  padding: -3px;
+}
+
+.fab:hover {
+  background: orange;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-right: 20px;
+  /* font-size: 200px; */
+}
+
+/* MEDIA QUERIES */
+/* SOURCE: https://codepen.io/pageboy/pen/MWboVVV */
+
+/* when the screen is wider than 480px */
+
+@media screen and (max-width: 780px) {
+  /* when the screen is 780px set the direction of the flex items to be in a row */
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  nav ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex: 0 0 7rem;
+  }
+
+  .about_me {
+    margin-top: 20%;
+  }
+
+  .nav .nav-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .subtitle {
+    display: flex;
+    /* keeps Welcome to my Portfolio! My name is Willie horizontally to the left */
+    /* transform: translate(x-axis, y-axis)*/
+    transform: translate(-20%, 25%);
+    /* background-color: #6466ed; */
+    background-color: mediumseagreen;
+    margin-left: 40%;
+    height: 15%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  /* when the screen is 780px set the direction of the flex items to be in a row */
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav ul li {
+    flex: 0 0 3rem;
+  }
+
+  .about_me {
+    margin-top: 40%;
+  }
+
+  .nav .nav-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  /* when the screen is 680px set the direction of the flex items to be in a row */
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav ul li {
+    flex: 0 0 3rem;
+  }
+
+  .about_me {
+    margin-top: 55%;
+  }
+
+  .nav .nav-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .subtitle {
+    display: flex;
+    /* keeps Welcome to my Portfolio! My name is Willie horizontally to the left */
+    /* transform: translate(x-axis, y-axis)*/
+    transform: translate(5%, -55%);
+    /* background-color: #6466ed; */
+    background-color: mediumseagreen;
+    margin-left: 40%;
+    height: 15%;
+    width: 70%;
+  }
+
+  .subtitle h2 {
+    display: flex;
+    height: auto;
+    font-size: 100%;
+    margin-left: 20%;
+    width: 100%;
+  }
+
+  /* create three columns and two rows (css grid) */
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* resize portfolio images */
+  .img-size {
+    height: 30%;
+    width: 30%;
+    margin-top: 50px;
+  }
+
+  .subtitle {
+    display: flex;
+    /* keeps Welcome to my Portfolio! My name is Willie horizontally to the left */
+    /* transform: translate(x-axis, y-axis)*/
+    transform: translate(-20%, 25%);
+    /* background-color: #6466ed; */
+    background-color: mediumseagreen;
+    margin-left: 40%;
+    height: 15%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  /* when the screen is 680px set the direction of the flex items to be in a row */
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav ul li {
+    flex: 0 0 3rem;
+  }
+
+  .about_me {
+    margin-top: 35%;
+  }
+
+  .nav .nav-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  /* when the screen is 680px set the direction of the flex items to be in a row */
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-end;
+  }
+
+  nav ul li {
+    flex: 0 0 3rem;
+  }
+
+  .about_me {
+    margin-top: 35%;
+  }
+
+  /* .nav .nav-abou-link {
+    display: flex;
+    flex-wrap: column;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
+  .subtitle {
+    display: flex;
+    /* keeps Welcome to my Portfolio! My name is Willie horizontally to the left */
+    /* transform: translate(x-axis, y-axis)*/
+    transform: translate(5%, -10%);
+    background-color: mediumseagreen;
+    margin-left: 30%;
+    height: 15%;
+    width: 70%;
+  }
+
+  .subtitle h2 {
+    display: flex;
+    height: auto;
+    font-size: 100%;
+    margin-left: 20%;
+    width: 100%;
+  }
+
+  .big-image-size {
+    margin-top: 30px;
+    height: 80%;
+    width: 90%;
+  }
+}
+
+
+/* media query for footer */
+@media screen and (max-width: 480px) {
+  .my-footer {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-around;
+  }
+  .footer-content container {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-around;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .fab {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-around;
+  }
+
+  .contact-me {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+  }
+}
+
+
+
+@media screen and (max-width: 470px) {
+    /* when the screen is 780px set the direction of the flex items to be in a row */
+  
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  
+    nav ul li {
+      flex: 0 0 3rem;
+    }
+  
+    .about_me {
+      margin-top: 55%;
+    }
+  
+    .nav .nav-about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .subtitle {
+      display: flex;
+      /* keeps Welcome to my Portfolio! My name is Willie horizontally to the left */
+      /* transform: translate(x-axis, y-axis)*/
+      transform: translate(-20%, 25%);
+      /* background-color: #6466ed; */
+      background-color: mediumseagreen;
+      margin-left: 40%;
+      height: 15%;
+      width: 70%;
+  }
+
+
+/* media query for footer */
+@media screen and (max-width: 440px) { 
+    .contact-me {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+
+
+
+@media screen and (max-width: 415px) {
+  .big-image-size {
+    margin-top: 30px;
+    height: 80%;
+    width: 90%;
+  }
+
+  .contact-me {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-right: 20px;
+    /* font-size: 200px; */
+}
+
+.nav-about-link {
+    display: flex;
+    flex-direction: row;
+    padding-right: 0px;
+}
+
+.about_me {
+    /* display: flex;
+    flex-direction: row; */
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: orange;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+    .navbar .navbar-expand-sm .nav0-items .nav-about-link {
+        display: flex;
+        /* justify-content: flex-start; */
+        flex-flow: column; 
+        font-size: 40%;
+        /* flex: 1 1 auto; */
+      }
+
+    }
+
+@media screen and (max-width: 220px) {
+  
+  .nav-about-link {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 0px;
+  }
+
+  /* resize portfolio images */
+.img-size {
+    height: 278px;
+    width: 90px;
+    /* gap between My Work and header */
+    margin-top: 100px;
+  }
+  
+}
+  
