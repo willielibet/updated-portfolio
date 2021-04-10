@@ -302,10 +302,16 @@ textarea {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
+.item {
+  width: 100%;
+}
+
 /* resize portfolio images */
 .img-size {
-  height: 278px;
-  width: 208px;
+  /* height: 278px; */
+  /* width: 208px; */
+  height: 640px;
+  width: 470px;
   /* gap between My Work and header */
   margin-top: 100px;
 }
