@@ -317,12 +317,16 @@ textarea {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .big-image-size {
-  margin-top: 30px;
-  height: 90%;
+  margin-top: 15px;
+  height: 95%;
+  margin-left: -40px;
+  /* margin-bottom: 15px; */
+  width: 95%;
 }
 
 .current-work {
   float: left;
+
 }
 
 .col-md-2 {
