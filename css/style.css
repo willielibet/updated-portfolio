@@ -306,6 +306,15 @@ textarea {
   width: 100%;
 }
 
+.github-repos {
+  font-size: 25px;
+  /* color: red; */
+}
+
+.item-text-category {
+  font-size: 30px;
+}
+
 /* resize portfolio images */
 .img-size {
   /* height: 278px; */
